@@ -15,8 +15,9 @@ toc:
   enable: true
 oasDefinitions:
 #  petstore: ./openapi/petstore.yaml
-  petstore: https://api.strongtie.com/api-docs/swagger.yaml
+  petstore: openapi/petstore.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
+  decorator-sample: Decorator-Sample/sample.yaml
 stylesheets:
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
   - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
