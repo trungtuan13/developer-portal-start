@@ -1,8 +1,24 @@
-type: reference-docs
-definitionId: sample
-settings:
+organization: testing_redocly
+apis:
+  core@v2:
+    root: sample.yaml
+    lint:
+      rules:
+        no-ambiguous-paths: error
+  external@v1:
+    root: sample-external.yaml
+    labels:
+      - external
+    features.openapi:
+      hideLogo: true
+
+lint:
+  extends:
+    - recommended
+
+features.openapi:
+  schemaExpansionLevel: 2
   generateCodeSamples:
     languages:
       - lang: curl
-      - lang: JavaScript
-      - lang: Node.js
+      - lang: Python
