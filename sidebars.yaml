@@ -42,7 +42,10 @@ training:
     expanded: false
     pages:
       - page: openapi/reference.page.yaml/*
-
+  - group: Decorator Sample
+    expanded: false
+    pages:
+      - page: Decorator-Sample/reference.page.yaml/*
   - group: Admin
     expanded: true
     pages:
