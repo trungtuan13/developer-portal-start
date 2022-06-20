@@ -1,5 +1,5 @@
 type: reference-docs
-definitionId: petstore
+definitionId: sample
 settings:
   generateCodeSamples:
     languages:
