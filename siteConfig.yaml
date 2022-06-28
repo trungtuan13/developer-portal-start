@@ -17,7 +17,7 @@ oasDefinitions:
 #  petstore: ./openapi/petstore.yaml
   petstore: openapi/petstore.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
-  sample: https://api.redocly.com/registry/bundle/simpson-strong-tie/Redocly%20Starter/internal/openapi.yaml?branch=main
+  titusSample: https://api.redocly.com/registry/bundle/titus-organization/HS-Change-Server-Decorators/external/openapi.yaml?branch=main
 stylesheets:
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
   - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
