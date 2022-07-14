@@ -30,9 +30,9 @@ Your files should be organized into folders. The folder naming is reflected in t
 │   └── ./images/logo.svg
 ├── ./index.mdx
 ├── ./openapi
-│   └── ./openapi/petstore.yaml
+│   └── ./openapi/cs-openapi.yaml
 ├── ./package.json
-├── ./reference.page.yaml
+├── ./reference.page.yaml_bak
 ├── ./sidebars.yaml
 ├── ./siteConfig.yaml
 ├── ./theme.ts

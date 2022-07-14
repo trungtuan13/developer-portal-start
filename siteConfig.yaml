@@ -14,10 +14,9 @@ logo:
 toc:
   enable: true
 oasDefinitions:
-#  petstore: ./openapi/petstore.yaml
-  petstore: openapi/petstore.yaml
+  petstore: openapi/cs-openapi.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
-  titusSample: https://api.redocly.com/registry/bundle/titus-organization/HS-Change-Server-Decorators/external/openapi.yaml?branch=main
+  csapi: connector-selector/cs-openapi.yaml
 stylesheets:
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
   - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
@@ -28,15 +27,16 @@ stylesheets:
 #scripts:
 #  - ./static/intercom.js
 nav:
-
   - label: Training exercises
     page: developer-portal/index.md
-
+  - label: Hello dau xanh
+    page: developer-portal/index.md
   - label: External docs
     icon: ./images/redocly-icon-white.png
     href: https://redoc.ly/docs/developer-portal/introduction/
-
   - search: true
+postBodyScripts:
+  - './body-scripts/my-script.js'
 
 footer:
   copyrightText: Copyright © Redocly 2019-2021. All right reserved.
