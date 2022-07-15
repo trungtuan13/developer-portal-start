@@ -6,7 +6,7 @@ Define that in the `siteConfig.yaml` file.
 
 ```yaml
 oasDefinitions:
-  petstore: ./openapi/cs-openapi.yaml
+  petstore: ./openapi/petstore.yaml
 ```
 
 Notice that the petstore is pointing to an API definition on the local filesystem.
@@ -26,7 +26,7 @@ Or else, add it to the local file system.
 
 ```yaml
 oasDefinitions:
-  petstore: ./openapi/cs-openapi.yaml
+  petstore: ./openapi/petstore.yaml
   ultra: ./openapi/ultra-api.yaml
   max: https://example.com/max/openapi.yaml
 ```

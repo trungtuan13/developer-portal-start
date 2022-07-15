@@ -1,0 +1,717 @@
+
+openapi: 3.0.1
+info:
+  title: SST Masonry Anchor API
+  version: v1
+paths:
+  /api/Analysis:
+    post:
+      tags:
+        - Analysis
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+      responses:
+        '200':
+          description: Success
+      security:
+        - Oauth2:
+            - read
+  /api/Design:
+    post:
+      tags:
+        - Design
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CalculateRequest'
+            example:
+              masonryWallDetails:
+                anchorBaseMaterial: 1
+                masonryAnchorLocation: 0
+                compressiveStrength: 12
+                loadType: 1
+                thickness: 8
+                baseMaterialHoleCondition: 0
+                baseMaterialTemperatureRange: 0
+              designInputs:
+                anchorType: 1
+                calculationType: 1
+                nua: 0
+                vuax: 0
+                vuay: 0
+                mux: 0
+                muy: 0
+                sustainedTension: false
+                conservativeShearBreakout: false
+              simpsonProduct:
+                anchorProduct: 6
+                headStyle: 1
+                diameter: 0.5
+                embededDepth: 4
+                concreteAnchorType: 1
+                anchorLength: 6
+              anchorGeometry:
+                basePlateThickness: 0
+                anchorPattern: 5
+                ex: 0
+                ey: 0
+                anchorSpacingX:
+                  - 3
+                anchorSpacingY:
+                  - 3
+                anchorBasePlateEdgeDistance:
+                  bx1: 1.5
+                  bx2: 1.5
+                  by1: 1.5
+                  by2: 1.5
+                anchorConcreteEdgeDistance:
+                  cx1: 12
+                  cx2: 12
+                  cy1: 12
+                  cy2: 12
+      responses:
+        '200':
+          description: Success
+      security:
+        - Oauth2:
+            - read
+  /api/Ping:
+    get:
+      tags:
+        - Ping
+      responses:
+        '200':
+          description: Success
+      security:
+        - Oauth2:
+            - read
+components:
+  schemas:
+    AnchorBasePlateEdgeDistance:
+      type: object
+      properties:
+        bx1:
+          type: number
+          format: double
+          default: 1.5
+        bx2:
+          type: number
+          format: double
+          default: 1.5
+        by1:
+          type: number
+          format: double
+          default: 1.5
+        by2:
+          type: number
+          format: double
+          default: 1.5
+      additionalProperties: false
+    AnchorConcreteEdgeDistance:
+      type: object
+      properties:
+        cx1:
+          type: number
+          format: double
+          default: 12
+        cx2:
+          type: number
+          format: double
+          default: 12
+        cy1:
+          type: number
+          format: double
+          default: 12
+        cy2:
+          type: number
+          format: double
+          default: 12
+      additionalProperties: false
+    AnchorGeometryModel:
+      type: object
+      properties:
+        basePlateThickness:
+          type: number
+          format: double
+          default: 0
+        anchorPattern:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+          type: integer
+          format: int32
+          default: 5
+        ex:
+          type: number
+          format: double
+          default: 0
+        ey:
+          type: number
+          format: double
+          default: 0
+        anchorSpacingX:
+          type: array
+          items:
+            type: number
+            format: double
+          default:
+            - 3
+          nullable: true
+        anchorSpacingY:
+          type: array
+          items:
+            type: number
+            format: double
+          default:
+            - 3
+          nullable: true
+        anchorBasePlateEdgeDistance:
+          $ref: '#/components/schemas/AnchorBasePlateEdgeDistance'
+        anchorConcreteEdgeDistance:
+          $ref: '#/components/schemas/AnchorConcreteEdgeDistance'
+      additionalProperties: false
+    CalculateRequest:
+      type: object
+      properties:
+        masonryWallDetails:
+          $ref: '#/components/schemas/MasonryWallDetailModel'
+        designInputs:
+          $ref: '#/components/schemas/DesignInputsModel'
+        simpsonProduct:
+          $ref: '#/components/schemas/SimpsonProductModel'
+        anchorGeometry:
+          $ref: '#/components/schemas/AnchorGeometryModel'
+      additionalProperties: false
+    DesignInputsModel:
+      type: object
+      properties:
+        anchorType:
+          enum:
+            - 0
+            - 1
+            - 2
+          type: integer
+          format: int32
+          default: 1
+        calculationType:
+          enum:
+            - 0
+            - 1
+          type: integer
+          format: int32
+          default: 1
+        nua:
+          type: number
+          format: double
+          default: 0
+        vuax:
+          type: number
+          format: double
+          default: 0
+        vuay:
+          type: number
+          format: double
+          default: 0
+        mux:
+          type: number
+          format: double
+          default: 0
+        muy:
+          type: number
+          format: double
+          default: 0
+        sustainedTension:
+          type: boolean
+          default: false
+        conservativeShearBreakout:
+          type: boolean
+          default: false
+      additionalProperties: false
+    MasonryWallDetailModel:
+      type: object
+      properties:
+        anchorBaseMaterial:
+          enum:
+            - 0
+            - 1
+            - 2
+          type: integer
+          format: int32
+          default: 1
+        masonryAnchorLocation:
+          enum:
+            - 0
+            - 1
+          type: integer
+          format: int32
+          default: 0
+        compressiveStrength:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+          type: integer
+          format: int32
+          default: 12
+        loadType:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+          type: integer
+          format: int32
+          default: 1
+        thickness:
+          type: number
+          format: double
+          default: 8
+        baseMaterialHoleCondition:
+          enum:
+            - 0
+            - 1
+          type: integer
+          format: int32
+          default: 0
+        baseMaterialTemperatureRange:
+          enum:
+            - 0
+            - 1
+          type: integer
+          format: int32
+          default: 0
+        isSeismic:
+          type: boolean
+          readOnly: true
+        isCracked:
+          type: boolean
+          readOnly: true
+        isUncracked:
+          type: boolean
+          readOnly: true
+      additionalProperties: false
+    SimpsonProductModel:
+      type: object
+      properties:
+        anchorProduct:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+          type: integer
+          format: int32
+          default: 6
+        headStyle:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+          type: integer
+          format: int32
+          default: 1
+        diameter:
+          type: number
+          format: double
+          default: 0.5
+        embededDepth:
+          type: number
+          format: double
+          default: 4
+        concreteAnchorType:
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+          type: integer
+          format: int32
+          default: 1
+        anchorLength:
+          type: number
+          format: double
+          default: 6
+      additionalProperties: false
+  securitySchemes:
+    Oauth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api-staging.strongtie.com/gws/authorization/oauth/token
+          scopes:
+            read: read data
+servers:
+  - url: https://api-staging.strongtie.com/gws

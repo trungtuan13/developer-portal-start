@@ -38,14 +38,14 @@ training:
 #        page: developer-portal/mdx.mdx
 #      - label: Creating React components
 #        page: developer-portal/custom-component.mdx
-  - group: Petstore reference
-    expanded: false
-    pages:
-      - page: openapi/reference.page.yaml/*
   - group: Connector Selector
     expanded: false
     pages:
-      - page: connector-selector/reference.page.yaml/*
+      - page: openapi/connector-selector/reference.page.yaml/*
+  - group: Crack Masonry
+    expanded: false
+    pages:
+      - page: openapi/crack-masonry/reference.page.yaml/*
 #  - group: Admin
 #    expanded: true
 #    pages:
